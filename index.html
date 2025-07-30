@@ -1178,7 +1178,7 @@ Examples:
         const worksheetDatabase = {
             'GGR2_PRAC3': {
                 name: 'Prac_workalong.xlsx',
-                data: null
+                url: 'https://github.com/JonathanGGR2/GGR2_STATS1/raw/main/Prac_workalong.xlsx'
             },
             'PRAC3_DOWNLOAD': {
                 name: 'Prac 3 - student exercise.pdf',
@@ -1475,7 +1475,19 @@ Examples:
             }
             
             if (code === 'GGR2_PRAC3') {
-                showMessage('worksheetMessage', '✅ Code valid! In a real environment, this would download: Prac_workalong.xlsx', 'success');
+                // Use the GitHub raw URL for direct download
+                const fileUrl = 'https://github.com/JonathanGGR2/GGR2_STATS1/raw/main/Prac_workalong.xlsx';
+                
+                // Create a download link
+                const link = document.createElement('a');
+                link.href = fileUrl;
+                link.target = '_blank'; // Opens in new tab if direct download fails
+                link.setAttribute('download', 'Prac_workalong.xlsx');
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                showMessage('worksheetMessage', '✅ Downloaded: Prac_workalong.xlsx', 'success');
                 document.getElementById('worksheetCode').value = '';
             } else {
                 showMessage('worksheetMessage', '❌ Invalid code. Please use "GGR2_PRAC3" as provided in class.', 'error');
