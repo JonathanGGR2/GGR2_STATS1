@@ -854,7 +854,7 @@
                 
                 <!-- Option 1: In-Class Worksheet -->
                 <div class="prac-card" onclick="showWorksheet()">
-                    <h3>📝 Option 1: In-Class Worksheet and Prac 3 Manual</h3>
+                    <h3>📝 Option 1: In-Class Worksheet</h3>
                     <p>Download the worksheet file using your unique code. We'll work through the problems together during class time, exploring statistical functions and data analysis techniques step by step.</p>
                 </div>
                 
@@ -1061,6 +1061,93 @@ Examples:
                 </div>
             </div>
             
+            <!-- Dr. Levin Help Page -->
+            <div id="drLevinHelpPage" class="page-content">
+                <button class="back-btn" onclick="goHome()">
+                    ← Back to Options
+                </button>
+                
+                <div class="help-section">
+                    <h2>💬 What Can You Ask Dr. Levin?</h2>
+                    <p style="text-align: center; color: #666; margin-bottom: 30px;">Dr. Levin is your personal statistics chatbot, ready to help with data visualization questions!</p>
+                    
+                    <div class="help-categories">
+                        <!-- Graph Selection Questions -->
+                        <div class="help-category">
+                            <h3>📊 Choosing the Right Graph</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"Which graph should I use for my data?"</div>
+                                <div class="sample-question">"When do I use a scatter plot vs line graph?"</div>
+                                <div class="sample-question">"What's the difference between bar charts and histograms?"</div>
+                                <div class="sample-question">"When should I use a pie chart?"</div>
+                                <div class="sample-question">"What are box plots used for?"</div>
+                                <div class="sample-question">"Should I use 3D charts in Excel?"</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Correlation Questions -->
+                        <div class="help-category">
+                            <h3>📈 Understanding Relationships</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"What does correlation coefficient r mean?"</div>
+                                <div class="sample-question">"How do I interpret R-squared values?"</div>
+                                <div class="sample-question">"What's the difference between r and R²?"</div>
+                                <div class="sample-question">"What does a correlation of 0.7 mean?"</div>
+                                <div class="sample-question">"Can correlation be negative?"</div>
+                                <div class="sample-question">"What's correlation vs causation?"</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Excel Help Questions -->
+                        <div class="help-category">
+                            <h3>🔧 Excel Technical Help</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"How do I add a trendline in Excel?"</div>
+                                <div class="sample-question">"How do I format my chart axes?"</div>
+                                <div class="sample-question">"How do I remove gridlines from my chart?"</div>
+                                <div class="sample-question">"How do I create a scatter plot in Excel?"</div>
+                                <div class="sample-question">"How do I add axis labels in Excel?"</div>
+                                <div class="sample-question">"How do I calculate correlation in Excel?"</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Data Interpretation Questions -->
+                        <div class="help-category">
+                            <h3>🔍 Understanding Your Data</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"How do I interpret a scatter plot?"</div>
+                                <div class="sample-question">"What do outliers mean in my data?"</div>
+                                <div class="sample-question">"How do I read a box plot?"</div>
+                                <div class="sample-question">"What does skewed data look like?"</div>
+                                <div class="sample-question">"How do I identify trends in my data?"</div>
+                                <div class="sample-question">"What's normal distribution?"</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional Tips -->
+                        <div class="help-category">
+                            <h3>🎨 Making Professional Charts</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"What makes a good academic graph?"</div>
+                                <div class="sample-question">"What colors should I use in charts?"</div>
+                                <div class="sample-question">"Should I start my axis at zero?"</div>
+                                <div class="sample-question">"How do I make my chart look professional?"</div>
+                                <div class="sample-question">"Should I include a title on my chart?"</div>
+                                <div class="sample-question">"My data doesn't look right in the graph"</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="try-dr-levin">
+                        <h3>🚀 Ready to Chat with Dr. Levin?</h3>
+                        <p>Take the quiz first, then ask Dr. Levin any of these questions - or your own!</p>
+                        <button class="quiz-btn" onclick="showQuiz()" style="width: auto; padding: 15px 30px; margin: 20px auto; display: block;">
+                            Start Quiz & Meet Dr. Levin →
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Worksheet Download Page -->
             <div id="worksheetPage" class="page-content">
                 <button class="back-btn" onclick="goHome()">
@@ -1068,11 +1155,10 @@ Examples:
                 </button>
                 
                 <div class="worksheet-section">
-                    <h2>📝 In-Class Worksheet and Prac 3 Manual</h2>
+                    <h2>📝 In-Class Worksheet Download</h2>
                     
-                    <!-- In-Class Worksheet Section -->
                     <div class="worksheet-info">
-                        <h4>📋 In-Class Worksheet - What you'll get:</h4>
+                        <h4>📋 What you'll get:</h4>
                         <p>• In-class data that will allow you to practice alongside Dr. Levin<br>
                         • Examples to create various graph types including:<br>
                         • Scatter plots with trend lines and correlation<br>
@@ -1093,28 +1179,6 @@ Examples:
                         </button>
                         
                         <div id="worksheetMessage" class="message"></div>
-                    </div>
-                    
-                    <!-- Practical 3 Exercise Section -->
-                    <div class="worksheet-info" style="margin-top: 40px; background: rgba(249, 115, 22, 0.05); border-left: 4px solid #f97316;">
-                        <h4 style="color: #ea580c;">📊 Practical 3 In-Class Exercise - What you'll get:</h4>
-                        <p>• A worksheet that is due by next Thursday (7th August)<br>
-                        • Requires thought about graphical figures in Excel<br>
-                        • Requires answers in the Excel sheet you create<br>
-                        • Read all the instructions within the sheet</p>
-                    </div>
-                    
-                    <div class="code-input-section">
-                        <div class="form-group">
-                            <label for="exerciseCode">Enter your worksheet code:</label>
-                            <input type="text" id="exerciseCode" placeholder="Enter code for Prac 3 Exercise" autocomplete="off">
-                        </div>
-                        
-                        <button class="download-btn" onclick="downloadExercise()" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
-                            📥 Download Prac 3 Class Exercise
-                        </button>
-                        
-                        <div id="exerciseMessage" class="message"></div>
                     </div>
                 </div>
             </div>
@@ -1178,11 +1242,7 @@ Examples:
         const worksheetDatabase = {
             'GGR2_PRAC3': {
                 name: 'Prac_workalong.xlsx',
-                url: 'https://github.com/JonathanGGR2/GGR2_STATS1/raw/main/Prac_workalong.xlsx'
-            },
-            'PRAC3_DOWNLOAD': {
-                name: 'Prac 3 - student exercise.pdf',
-                url: 'https://github.com/JonathanGGR2/GGR2_STATS1/raw/main/Prac%203%20-%20student%20exercise.pdf'
+                data: null
             }
         };
         
@@ -1313,6 +1373,889 @@ Examples:
                     <p>In Excel: Insert → Charts → Statistical → Box & Whisker</p>
                 `
             },
+            'histogram use': {
+                title: "Histograms: Understanding Data Distribution",
+                content: `
+                    <h5>📊 What Histograms Reveal</h5>
+                    <p>Histograms show the shape and spread of your data distribution:</p>
+                    
+                    <div class="example-box">
+                        <strong>Key Features to Look For:</strong><br>
+                        • <strong>Shape:</strong> Normal (bell), skewed, bimodal<br>
+                        • <strong>Center:</strong> Where most values cluster<br>
+                        • <strong>Spread:</strong> How wide the distribution is<br>
+                        • <strong>Outliers:</strong> Unusual values far from center
+                    </div>
+                    
+                    <h5>🔧 Excel Tips:</h5>
+                    <p>• Data Analysis → Histogram (if enabled)<br>
+                    • Or Insert → Charts → Statistical → Histogram<br>
+                    • Adjust bin size to reveal patterns clearly<br>
+                    • Remove gaps between bars</p>
+                    
+                    <p>Common mistake: Don't confuse with bar charts - histograms show continuous data ranges!</p>
+                `
+            },
+            'line graph': {
+                title: "Line Graphs: Showing Change Over Time",
+                content: `
+                    <h5>📈 When Line Graphs Excel</h5>
+                    <p>Line graphs are perfect for time-series data and showing trends:</p>
+                    
+                    <div class="example-box">
+                        <strong>Best Uses:</strong><br>
+                        • Temperature changes over months<br>
+                        • Stock prices over time<br>
+                        • Population growth over years<br>
+                        • Any data where order matters
+                    </div>
+                    
+                    <h5>📏 Best Practices:</h5>
+                    <p>• Always put time on the X-axis<br>
+                    • Start Y-axis at appropriate value (often zero)<br>
+                    • Use markers sparingly - only if few data points<br>
+                    • Multiple lines? Use different colors/patterns<br>
+                    • Remove gridlines for cleaner look</p>
+                    
+                    <p>Excel tip: Select data → Insert → Line Chart → choose style without markers for smooth trends.</p>
+                `
+            },
+            'column vs bar': {
+                title: "Column Charts vs Bar Charts: Layout Matters",
+                content: `
+                    <h5>📊 Same Data, Different Orientation</h5>
+                    <p>Both compare categories, but layout affects readability:</p>
+                    
+                    <div class="example-box">
+                        <strong>Column Charts (Vertical Bars):</strong><br>
+                        • Best for short category names<br>
+                        • Time-based categories (months, years)<br>
+                        • When you have space above/below<br>
+                        • Traditional and familiar to readers
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Bar Charts (Horizontal Bars):</strong><br>
+                        • Better for long category names<br>
+                        • Many categories (easier to read labels)<br>
+                        • When you want to emphasize values<br>
+                        • More space for category labels
+                    </div>
+                    
+                    <p>Rule of thumb: If category names are longer than 5-6 characters, consider horizontal bars!</p>
+                `
+            },
+            '3d charts': {
+                title: "3D Charts: Why You Should Avoid Them",
+                content: `
+                    <h5>🚫 The 3D Problem</h5>
+                    <p>3D charts might look fancy, but they create more problems than they solve:</p>
+                    
+                    <div class="example-box">
+                        <strong>Problems with 3D Charts:</strong><br>
+                        • Harder to read exact values<br>
+                        • Perspective distorts data perception<br>
+                        • Elements can hide behind others<br>
+                        • Looks unprofessional in academic work<br>
+                        • No real benefit over 2D versions
+                    </div>
+                    
+                    <h5>✅ Better Alternatives:</h5>
+                    <p>• Use clean, flat 2D charts<br>
+                    • Focus on clear labeling and colors<br>
+                    • Let the data tell the story, not fancy effects<br>
+                    • Save 3D for actual 3-dimensional data only</p>
+                    
+                    <p>Remember: Academic work values clarity and accuracy over visual effects!</p>
+                `
+            },
+            'chart selection': {
+                title: "Complete Chart Selection Decision Tree",
+                content: `
+                    <h5>🌳 Your Chart Selection Guide</h5>
+                    <p>Follow this decision tree to pick the perfect chart:</p>
+                    
+                    <div class="example-box">
+                        <strong>Step 1 - What's your goal?</strong><br>
+                        • Show relationship → Scatter plot<br>
+                        • Show trend → Line graph<br>
+                        • Compare values → Bar chart<br>
+                        • Show distribution → Histogram/Box plot<br>
+                        • Show composition → Stacked bar/Pie chart
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Step 2 - What's your data?</strong><br>
+                        • Time series → Line graph<br>
+                        • Categories → Bar chart<br>
+                        • Continuous → Scatter/Histogram<br>
+                        • Groups to compare → Box plot
+                    </div>
+                    
+                    <p>When in doubt, start with a simple bar chart or scatter plot - they work for most situations!</p>
+                `
+            },
+
+            // Correlation & Relationships (8 responses)
+            'correlation coefficient': {
+                title: "Understanding Correlation Coefficient (r)",
+                content: `
+                    <h5>📈 What r Tells You</h5>
+                    <p>The correlation coefficient (r) measures how closely two variables move together:</p>
+                    
+                    <div class="example-box">
+                        <strong>Key Properties:</strong><br>
+                        • <strong>Range:</strong> -1 to +1<br>
+                        • <strong>Direction:</strong> + means positive, - means negative<br>
+                        • <strong>Strength:</strong> Closer to ±1 = stronger relationship<br>
+                        • <strong>Zero:</strong> No linear relationship
+                    </div>
+                    
+                    <h5>🔢 Interpretation Guide:</h5>
+                    <div class="formula">
+                        ±0.90 to ±1.00: Very strong<br>
+                        ±0.70 to ±0.89: Strong<br>
+                        ±0.50 to ±0.69: Moderate<br>
+                        ±0.30 to ±0.49: Weak<br>
+                        ±0.00 to ±0.29: Very weak
+                    </div>
+                    
+                    <p>Excel function: =CORREL(array1, array2). Always report with sign (+ or -)!</p>
+                `
+            },
+            'r squared': {
+                title: "R-Squared (R²): Explained Variation",
+                content: `
+                    <h5>📊 What R² Means</h5>
+                    <p>R² tells you what percentage of variation in Y is explained by X:</p>
+                    
+                    <div class="example-box">
+                        <strong>Understanding R²:</strong><br>
+                        • R² = r × r (correlation squared)<br>
+                        • Always positive (0 to 1)<br>
+                        • Expressed as percentage<br>
+                        • Higher = better predictive power
+                    </div>
+                    
+                    <h5>💡 Real Example:</h5>
+                    <p>If R² = 0.64 between study hours and test scores:<br>
+                    "64% of the variation in test scores is explained by study hours, 36% is due to other factors."</p>
+                    
+                    <h5>🎯 Practical Guidelines:</h5>
+                    <p>• R² > 0.7: Strong relationship<br>
+                    • R² = 0.5: Moderate relationship<br>
+                    • R² < 0.3: Weak relationship</p>
+                `
+            },
+            'r vs r squared': {
+                title: "r vs R²: When to Use Which",
+                content: `
+                    <h5>🤔 The Key Differences</h5>
+                    <p>Both measure relationship strength, but they tell different stories:</p>
+                    
+                    <div class="example-box">
+                        <strong>Use r (correlation) when:</strong><br>
+                        • You want to know direction (positive/negative)<br>
+                        • Describing the relationship strength<br>
+                        • Comparing different correlations<br>
+                        • r = -0.8 means strong negative relationship
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Use R² when:</strong><br>
+                        • You want to know explained variation<br>
+                        • Evaluating predictive models<br>
+                        • Talking about "fit" of your model<br>
+                        • R² = 0.64 means 64% of variation explained
+                    </div>
+                    
+                    <h5>🔗 The Connection:</h5>
+                    <p>If r = 0.8, then R² = 0.64<br>If r = -0.8, then R² = 0.64 (same R²!)</p>
+                `
+            },
+            'correlation strength': {
+                title: "Interpreting Correlation Strength in Context",
+                content: `
+                    <h5>💪 What Makes a "Strong" Correlation?</h5>
+                    <p>Correlation strength depends on your field and context:</p>
+                    
+                    <div class="example-box">
+                        <strong>Physical Sciences:</strong><br>
+                        • r > 0.95 often expected<br>
+                        • Strong theoretical relationships<br>
+                        • Controlled conditions
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Social Sciences:</strong><br>
+                        • r > 0.50 can be meaningful<br>
+                        • Human behavior is complex<br>
+                        • Many uncontrolled variables
+                    </div>
+                    
+                    <h5>⚠️ Important Notes:</h5>
+                    <p>• Don't obsess over "perfect" correlations<br>
+                    • Consider practical significance<br>
+                    • r = 0.3 might be important in psychology<br>
+                    • r = 0.8 might be weak in physics</p>
+                `
+            },
+            'negative correlation': {
+                title: "Understanding Negative Correlations",
+                content: `
+                    <h5>↘️ When Variables Move in Opposite Directions</h5>
+                    <p>Negative correlations are just as meaningful as positive ones:</p>
+                    
+                    <div class="example-box">
+                        <strong>Examples of Negative Correlations:</strong><br>
+                        • Temperature vs heating costs<br>
+                        • Exercise vs resting heart rate<br>
+                        • Study time vs number of errors<br>
+                        • Price vs demand (usually)
+                    </div>
+                    
+                    <h5>📈 What the Numbers Mean:</h5>
+                    <p>• r = -0.8 is just as strong as r = +0.8<br>
+                    • Both show strong relationships<br>
+                    • Only the direction differs<br>
+                    • R² is the same for both: 0.64</p>
+                    
+                    <h5>💡 Interpretation Tip:</h5>
+                    <p>Say "As X increases, Y decreases" rather than "negative relationship" - it's clearer!</p>
+                `
+            },
+            'correlation excel': {
+                title: "Calculating Correlation in Excel",
+                content: `
+                    <h5>🔧 Excel Methods for Correlation</h5>
+                    <p>Multiple ways to calculate correlation in Excel:</p>
+                    
+                    <div class="example-box">
+                        <strong>Method 1: CORREL Function</strong><br>
+                        • =CORREL(array1, array2)<br>
+                        • Simple and direct<br>
+                        • Example: =CORREL(A2:A20, B2:B20)
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Method 2: Data Analysis Toolpak</strong><br>
+                        • Data → Data Analysis → Correlation<br>
+                        • Can do multiple correlations at once<br>
+                        • Creates correlation matrix
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Method 3: From Scatter Plot</strong><br>
+                        • Add trendline to scatter plot<br>
+                        • Display R² value<br>
+                        • Calculate r = ±√R²
+                    </div>
+                `
+            },
+            'correlation causation': {
+                title: "Correlation vs Causation: A Critical Distinction",
+                content: `
+                    <h5>⚠️ The Most Important Rule in Statistics</h5>
+                    <p>"Correlation does not imply causation" - here's why this matters:</p>
+                    
+                    <div class="example-box">
+                        <strong>Classic Examples:</strong><br>
+                        • Ice cream sales vs drowning deaths (both caused by summer)<br>
+                        • Shoe size vs reading ability in children (both caused by age)<br>
+                        • Number of firefighters vs damage (more damage needs more firefighters)
+                    </div>
+                    
+                    <h5>🤔 Three Possible Explanations for Correlation:</h5>
+                    <p>1. <strong>A causes B:</strong> Exercise causes weight loss<br>
+                    2. <strong>B causes A:</strong> Weight loss motivates more exercise<br>
+                    3. <strong>C causes both A and B:</strong> Motivation causes both</p>
+                    
+                    <p>Always ask: "What else could explain this relationship?"</p>
+                `
+            },
+            'strong correlation': {
+                title: "What Makes a Correlation Meaningful?",
+                content: `
+                    <h5>🎯 Beyond Just the Numbers</h5>
+                    <p>A strong correlation isn't just about the r value - context matters:</p>
+                    
+                    <div class="example-box">
+                        <strong>Consider These Factors:</strong><br>
+                        • <strong>Sample size:</strong> Larger samples more reliable<br>
+                        • <strong>Data quality:</strong> Measurement errors weaken correlation<br>
+                        • <strong>Outliers:</strong> Can artificially inflate or deflate r<br>
+                        • <strong>Range restriction:</strong> Limited ranges reduce correlation
+                    </div>
+                    
+                    <h5>📊 Practical Significance:</h5>
+                    <p>• r = 0.3 might be huge in social science<br>
+                    • r = 0.9 might be expected in physics<br>
+                    • Consider real-world impact, not just statistics<br>
+                    • Always visualize with scatter plots</p>
+                    
+                    <p>Remember: Statistical significance ≠ practical importance!</p>
+                `
+            },
+
+            // Excel Technical Help (8 responses)
+            'add trendline': {
+                title: "Adding Trendlines in Excel",
+                content: `
+                    <h5>📈 Step-by-Step Trendline Guide</h5>
+                    <p>Trendlines show the general direction and strength of relationships:</p>
+                    
+                    <div class="example-box">
+                        <strong>Excel Steps:</strong><br>
+                        1. Create a scatter plot with your data<br>
+                        2. Right-click on any data point<br>
+                        3. Select "Add Trendline"<br>
+                        4. Choose "Linear" for straight-line relationships<br>
+                        5. Check "Display R-squared value on chart"<br>
+                        6. Check "Display equation on chart" (optional)
+                    </div>
+                    
+                    <h5>🎯 Trendline Options:</h5>
+                    <p>• <strong>Linear:</strong> Best for most relationships<br>
+                    • <strong>Polynomial:</strong> For curved relationships<br>
+                    • <strong>Exponential:</strong> For growth/decay patterns<br>
+                    • <strong>Logarithmic:</strong> For diminishing returns</p>
+                    
+                    <p>Pro tip: Start with linear - it's right 90% of the time!</p>
+                `
+            },
+            'format axes': {
+                title: "Formatting Chart Axes Like a Pro",
+                content: `
+                    <h5>📏 Professional Axis Formatting</h5>
+                    <p>Well-formatted axes make your charts clear and professional:</p>
+                    
+                    <div class="example-box">
+                        <strong>Right-click axis → Format Axis:</strong><br>
+                        • <strong>Minimum/Maximum:</strong> Set appropriate range<br>
+                        • <strong>Major units:</strong> Choose logical intervals<br>
+                        • <strong>Number format:</strong> Remove unnecessary decimals<br>
+                        • <strong>Line color:</strong> Use black for academic work
+                    </div>
+                    
+                    <h5>📊 Common Axis Decisions:</h5>
+                    <p>• <strong>Start at zero?</strong> Usually yes, unless misleading<br>
+                    • <strong>Tick marks:</strong> Keep them simple<br>
+                    • <strong>Axis titles:</strong> Always include with units<br>
+                    • <strong>Font size:</strong> 10-12pt for readability</p>
+                    
+                    <p>Goal: Readers should understand your scale immediately!</p>
+                `
+            },
+            'remove gridlines': {
+                title: "Creating Clean Charts by Removing Gridlines",
+                content: `
+                    <h5>🧹 Cleaning Up Your Charts</h5>
+                    <p>Gridlines often add clutter without helping understanding:</p>
+                    
+                    <div class="example-box">
+                        <strong>Method 1: Direct Selection</strong><br>
+                        • Click on any gridline<br>
+                        • Press Delete key<br>
+                        • All gridlines disappear instantly
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Method 2: Chart Elements</strong><br>
+                        • Select chart<br>
+                        • Chart Elements button (+ icon)<br>
+                        • Uncheck "Gridlines"
+                    </div>
+                    
+                    <h5>✨ Other Cleanup Tips:</h5>
+                    <p>• Remove chart borders<br>
+                    • Delete unnecessary legends<br>
+                    • Remove chart titles (use captions instead)<br>
+                    • Keep backgrounds white/transparent</p>
+                    
+                    <p>Clean charts focus attention on your data, not decorations!</p>
+                `
+            },
+            'chart colors': {
+                title: "Professional Color Choices for Academic Charts",
+                content: `
+                    <h5>🎨 Color Guidelines for Academic Work</h5>
+                    <p>Color choices can make or break your chart's effectiveness:</p>
+                    
+                    <div class="example-box">
+                        <strong>Academic Best Practices:</strong><br>
+                        • Use black/dark gray for most elements<br>
+                        • Choose colorblind-friendly palettes<br>
+                        • Avoid bright primary colors (red, blue, yellow)<br>
+                        • Ensure contrast for readability
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Good Color Choices:</strong><br>
+                        • Dark blue, dark green, dark red<br>
+                        • Grayscale for simple comparisons<br>
+                        • Maximum 3-4 colors per chart<br>
+                        • Use color to highlight important data
+                    </div>
+                    
+                    <h5>🚫 Colors to Avoid:</h5>
+                    <p>• Neon or fluorescent colors<br>
+                    • Red-green combinations (colorblind issues)<br>
+                    • Too many similar shades</p>
+                `
+            },
+            'error bars': {
+                title: "Adding Error Bars to Show Data Uncertainty",
+                content: `
+                    <h5>📊 Understanding Error Bars</h5>
+                    <p>Error bars show the uncertainty or variability in your data:</p>
+                    
+                    <div class="example-box">
+                        <strong>Excel Steps:</strong><br>
+                        1. Select your chart data series<br>
+                        2. Chart Elements (+) → Error Bars<br>
+                        3. Choose error bar type<br>
+                        4. More Error Bar Options for custom values
+                    </div>
+                    
+                    <h5>🎯 Types of Error Bars:</h5>
+                    <p>• <strong>Standard Error:</strong> Shows precision of mean<br>
+                    • <strong>Standard Deviation:</strong> Shows data spread<br>
+                    • <strong>Confidence Intervals:</strong> Shows likely range of true value<br>
+                    • <strong>Custom:</strong> Your own calculated values</p>
+                    
+                    <p>Always specify what your error bars represent in your caption!</p>
+                `
+            },
+            'scatter plot excel': {
+                title: "Creating Perfect Scatter Plots in Excel",
+                content: `
+                    <h5>📊 Step-by-Step Scatter Plot Creation</h5>
+                    <p>Scatter plots are essential for exploring relationships:</p>
+                    
+                    <div class="example-box">
+                        <strong>Excel Process:</strong><br>
+                        1. Select your X and Y data (two columns)<br>
+                        2. Insert → Charts → Scatter<br>
+                        3. Choose "Scatter with only Markers"<br>
+                        4. Add axis labels and clean up formatting<br>
+                        5. Add trendline if showing relationship
+                    </div>
+                    
+                    <h5>📏 Scatter Plot Best Practices:</h5>
+                    <p>• Put independent variable on X-axis<br>
+                    • Put dependent variable on Y-axis<br>
+                    • Use small, clear markers<br>
+                    • Include units in axis labels<br>
+                    • Remove gridlines for cleaner look</p>
+                    
+                    <p>Common mistake: Don't connect the dots with lines unless showing time series!</p>
+                `
+            },
+            'axis labels': {
+                title: "Adding Clear Axis Labels in Excel",
+                content: `
+                    <h5>📝 Essential Labeling for Professional Charts</h5>
+                    <p>Clear axis labels are crucial for understanding your data:</p>
+                    
+                    <div class="example-box">
+                        <strong>Adding Axis Titles:</strong><br>
+                        • Select chart<br>
+                        • Chart Elements (+) → Axis Titles<br>
+                        • Check "Primary Horizontal" and "Primary Vertical"<br>
+                        • Click on title text to edit
+                    </div>
+                    
+                    <h5>✍️ Good Label Writing:</h5>
+                    <p>• Always include units: "Temperature (°C)"<br>
+                    • Be specific: "Monthly Rainfall" not just "Rainfall"<br>
+                    • Keep them concise but clear<br>
+                    • Use proper capitalization</p>
+                    
+                    <h5>🎯 Label Examples:</h5>
+                    <p>Good: "Body Mass (kg)"<br>
+                    Poor: "weight"<br>
+                    Good: "Time (minutes)"<br>
+                    Poor: "t"</p>
+                `
+            },
+            'resize chart': {
+                title: "Resizing and Positioning Charts in Excel",
+                content: `
+                    <h5>📐 Getting Chart Size Just Right</h5>
+                    <p>Proper chart sizing improves readability and fits your document layout:</p>
+                    
+                    <div class="example-box">
+                        <strong>Resizing Methods:</strong><br>
+                        • Drag corner handles (maintains proportions)<br>
+                        • Drag side handles (changes width/height only)<br>
+                        • Right-click → Size and Properties (exact dimensions)<br>
+                        • Format Chart Area → Size tab (precise control)
+                    </div>
+                    
+                    <h5>📏 Size Guidelines:</h5>
+                    <p>• Make charts large enough to read easily<br>
+                    • Maintain aspect ratio (don't distort)<br>
+                    • Consider final document size (print vs screen)<br>
+                    • Leave white space around charts</p>
+                    
+                    <p>Pro tip: Hold Shift while dragging corners to maintain proportions!</p>
+                `
+            },
+
+            // Data Interpretation (6 responses)
+            'interpret scatter': {
+                title: "Reading and Interpreting Scatter Plots",
+                content: `
+                    <h5>👀 What to Look for in Scatter Plots</h5>
+                    <p>Scatter plots reveal patterns that numbers alone can't show:</p>
+                    
+                    <div class="example-box">
+                        <strong>Key Patterns:</strong><br>
+                        • <strong>Direction:</strong> Upward slope = positive, downward = negative<br>
+                        • <strong>Strength:</strong> Tight cluster = strong, spread out = weak<br>
+                        • <strong>Shape:</strong> Linear, curved, or no pattern<br>
+                        • <strong>Outliers:</strong> Points far from the main pattern
+                    </div>
+                    
+                    <h5>🔍 Interpretation Steps:</h5>
+                    <p>1. Describe the overall pattern<br>
+                    2. Note the direction and strength<br>
+                    3. Identify any outliers<br>
+                    4. Consider what causes the relationship<br>
+                    5. Note any non-linear patterns</p>
+                    
+                    <p>Remember: Always look at the plot before trusting correlation numbers!</p>
+                `
+            },
+            'outliers': {
+                title: "Identifying and Handling Outliers",
+                content: `
+                    <h5>🎯 Spotting Unusual Data Points</h5>
+                    <p>Outliers are data points that don't fit the general pattern:</p>
+                    
+                    <div class="example-box">
+                        <strong>How to Identify Outliers:</strong><br>
+                        • Points far from trendline in scatter plots<br>
+                        • Values beyond whiskers in box plots<br>
+                        • IQR method: Beyond Q1-1.5×IQR or Q3+1.5×IQR<br>
+                        • Z-score method: |z| > 2 or 3
+                    </div>
+                    
+                    <h5>🤔 What to Do with Outliers:</h5>
+                    <p>• <strong>Investigate first:</strong> Data error or real phenomenon?<br>
+                    • <strong>Report them:</strong> Don't just delete without reason<br>
+                    • <strong>Analyze with and without:</strong> How do they affect results?<br>
+                    • <strong>Consider context:</strong> Are they meaningful?</p>
+                    
+                    <p>Never automatically remove outliers - they often tell interesting stories!</p>
+                `
+            },
+            'read box plot': {
+                title: "How to Read and Interpret Box Plots",
+                content: `
+                    <h5>📦 Box Plot Anatomy</h5>
+                    <p>Each part of a box plot tells you something different about your data:</p>
+                    
+                    <div class="example-box">
+                        <strong>The Five-Number Summary:</strong><br>
+                        • <strong>Bottom whisker:</strong> Minimum value (or Q1 - 1.5×IQR)<br>
+                        • <strong>Bottom of box:</strong> Q1 (25th percentile)<br>
+                        • <strong>Line in box:</strong> Median (50th percentile)<br>
+                        • <strong>Top of box:</strong> Q3 (75th percentile)<br>
+                        • <strong>Top whisker:</strong> Maximum value (or Q3 + 1.5×IQR)
+                    </div>
+                    
+                    <h5>🔍 What Box Plots Reveal:</h5>
+                    <p>• <strong>Skewness:</strong> Median closer to Q1 or Q3?<br>
+                    • <strong>Spread:</strong> How tall is the box?<br>
+                    • <strong>Outliers:</strong> Points beyond whiskers<br>
+                    • <strong>Symmetry:</strong> Are whiskers equal length?</p>
+                `
+            },
+            'skewed data': {
+                title: "Understanding Skewed Data Distributions",
+                content: `
+                    <h5>📊 When Data Isn't Symmetric</h5>
+                    <p>Skewness describes whether data is pulled toward one tail:</p>
+                    
+                    <div class="example-box">
+                        <strong>Right (Positive) Skew:</strong><br>
+                        • Long tail extends to the right<br>
+                        • Mean > Median<br>
+                        • Examples: Income, house prices, reaction times
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Left (Negative) Skew:</strong><br>
+                        • Long tail extends to the left<br>
+                        • Mean < Median<br>
+                        • Examples: Age at death, test scores (when most do well)
+                    </div>
+                    
+                    <h5>📈 Recognizing Skewness:</h5>
+                    <p>• In histograms: Where is the tail?<br>
+                    • In box plots: Where is the median in the box?<br>
+                    • Compare mean and median values</p>
+                    
+                    <p>Tip: Use median instead of mean for skewed distributions!</p>
+                `
+            },
+            'identify trends': {
+                title: "Identifying Trends and Patterns in Data",
+                content: `
+                    <h5>📈 Spotting Meaningful Patterns</h5>
+                    <p>Trends help you understand what's happening in your data over time or across groups:</p>
+                    
+                    <div class="example-box">
+                        <strong>Types of Trends:</strong><br>
+                        • <strong>Linear:</strong> Steady increase or decrease<br>
+                        • <strong>Exponential:</strong> Accelerating growth/decline<br>
+                        • <strong>Cyclical:</strong> Regular ups and downs<br>
+                        • <strong>Seasonal:</strong> Predictable periodic patterns
+                    </div>
+                    
+                    <h5>🔍 Trend Analysis Tips:</h5>
+                    <p>• Look at the big picture, not individual points<br>
+                    • Consider the time scale of your data<br>
+                    • Watch for changes in trend direction<br>
+                    • Distinguish trends from random variation<br>
+                    • Consider external factors that might explain trends</p>
+                    
+                    <p>Use trendlines and moving averages to highlight patterns!</p>
+                `
+            },
+            'normal distribution': {
+                title: "Recognizing Normal Distribution in Graphs",
+                content: `
+                    <h5>🔔 The Famous Bell Curve</h5>
+                    <p>Normal distribution appears frequently in nature and statistics:</p>
+                    
+                    <div class="example-box">
+                        <strong>Characteristics of Normal Distribution:</strong><br>
+                        • Symmetric bell shape<br>
+                        • Mean = Median = Mode<br>
+                        • 68% within 1 standard deviation<br>
+                        • 95% within 2 standard deviations<br>
+                        • 99.7% within 3 standard deviations
+                    </div>
+                    
+                    <h5>📊 How to Check for Normality:</h5>
+                    <p>• Create a histogram - does it look bell-shaped?<br>
+                    • Compare mean and median - are they similar?<br>
+                    • Look for symmetric spread around center<br>
+                    • Check for outliers - few in normal distribution</p>
+                    
+                    <p>Many statistical tests assume normality, so this check is important!</p>
+                `
+            },
+
+            // Formatting & Best Practices (5 responses)
+            'good academic graph': {
+                title: "Elements of Professional Academic Graphs",
+                content: `
+                    <h5>🎓 Academic Standards for Data Visualization</h5>
+                    <p>Academic graphs prioritize clarity and accuracy over visual appeal:</p>
+                    
+                    <div class="example-box">
+                        <strong>Essential Elements:</strong><br>
+                        • Clear, descriptive axis labels with units<br>
+                        • Appropriate scale that doesn't mislead<br>
+                        • Professional color scheme (avoid bright colors)<br>
+                        • Clean, uncluttered design<br>
+                        • Proper figure caption below the graph
+                    </div>
+                    
+                    <h5>📏 Academic Formatting Rules:</h5>
+                    <p>• Black text and lines for readability<br>
+                    • 10-12pt font size minimum<br>
+                    • Remove unnecessary 3D effects<br>
+                    • Start axes at appropriate values<br>
+                    • Include error bars when showing means</p>
+                    
+                    <p>Remember: Your graph should stand alone and tell a clear story!</p>
+                `
+            },
+            'chart title': {
+                title: "Chart Titles vs Figure Captions: Academic Standard",
+                content: `
+                    <h5>📝 Why Figure Captions Are Better</h5>
+                    <p>In academic work, figure captions are preferred over chart titles:</p>
+                    
+                    <div class="example-box">
+                        <strong>Remove Chart Titles When:</strong><br>
+                        • Writing research papers<br>
+                        • Creating formal reports<br>
+                        • Following academic style guides<br>
+                        • Space is limited
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Use Figure Captions Instead:</strong><br>
+                        • "Figure 1. Temperature changes in Cape Town over 12 months"<br>
+                        • Place below the graph<br>
+                        • Include data source if relevant<br>
+                        • Explain key findings briefly
+                    </div>
+                    
+                    <h5>✂️ Removing Titles in Excel:</h5>
+                    <p>• Click on chart title<br>
+                    • Press Delete key<br>
+                    • Or Chart Elements (+) → uncheck "Chart Title"</p>
+                `
+            },
+            'professional colors': {
+                title: "Color Psychology and Professional Palettes",
+                content: `
+                    <h5>🎨 Strategic Color Choices</h5>
+                    <p>Colors communicate meaning, so choose them carefully:</p>
+                    
+                    <div class="example-box">
+                        <strong>Professional Color Palette:</strong><br>
+                        • Navy blue: Trust, stability, data<br>
+                        • Dark green: Growth, positive trends<br>
+                        • Burgundy/Dark red: Important, attention<br>
+                        • Charcoal gray: Neutral, secondary data<br>
+                        • Avoid: Neon, bright primary colors
+                    </div>
+                    
+                    <h5>♿ Accessibility Guidelines:</h5>
+                    <p>• Test for colorblind accessibility<br>
+                    • Use patterns or shapes, not just color<br>
+                    • Ensure sufficient contrast<br>
+                    • Limit to 3-4 colors maximum</p>
+                    
+                    <h5>🎯 Color Meaning Conventions:</h5>
+                    <p>• Red: Danger, loss, negative<br>
+                    • Green: Success, profit, positive<br>
+                    • Blue: Neutral, informational</p>
+                `
+            },
+            'axis zero': {
+                title: "When to Start Your Axis at Zero",
+                content: `
+                    <h5>📊 The Zero Baseline Debate</h5>
+                    <p>Starting at zero prevents misleading viewers, but isn't always necessary:</p>
+                    
+                    <div class="example-box">
+                        <strong>Always Start at Zero For:</strong><br>
+                        • Bar charts and column charts<br>
+                        • When showing absolute quantities<br>
+                        • When comparing magnitudes<br>
+                        • When zero is meaningful reference point
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Zero Not Required For:</strong><br>
+                        • Line graphs showing change over time<br>
+                        • When zero is not relevant (e.g., temperature in Celsius)<br>
+                        • When range is very narrow<br>
+                        • Scatter plots (focus on relationship, not magnitude)
+                    </div>
+                    
+                    <h5>⚖️ The Key Principle:</h5>
+                    <p>Don't mislead your audience. If cutting the axis makes small differences look huge, start at zero!</p>
+                `
+            },
+            'professional chart': {
+                title: "Complete Professional Chart Checklist",
+                content: `
+                    <h5>✅ Your Chart Quality Checklist</h5>
+                    <p>Use this checklist before submitting any academic work:</p>
+                    
+                    <div class="example-box">
+                        <strong>Content Check:</strong><br>
+                        ☐ Axis labels include units<br>
+                        ☐ Scale is appropriate and not misleading<br>
+                        ☐ Chart type matches data type<br>
+                        ☐ All text is readable<br>
+                        ☐ Legend is necessary and clear
+                    </div>
+                    
+                    <div class="example-box">
+                        <strong>Design Check:</strong><br>
+                        ☐ Removed unnecessary gridlines<br>
+                        ☐ Used professional colors<br>
+                        ☐ Consistent font sizes (10-12pt)<br>
+                        ☐ No 3D effects or unnecessary decoration<br>
+                        ☐ Clean, uncluttered appearance
+                    </div>
+                    
+                    <p>A perfect chart clearly communicates its message without distractions!</p>
+                `
+            },
+
+            // Common Student Struggles (3 responses)
+            'data looks wrong': {
+                title: "When Your Graph Doesn't Look Right",
+                content: `
+                    <h5>🔧 Troubleshooting Common Graph Problems</h5>
+                    <p>When your graph looks "off," here's how to diagnose the issue:</p>
+                    
+                    <div class="example-box">
+                        <strong>Common Problems & Solutions:</strong><br>
+                        • <strong>Weird scale:</strong> Check axis min/max values<br>
+                        • <strong>Missing data:</strong> Verify your data selection<br>
+                        • <strong>Wrong chart type:</strong> Consider if scatter vs line is appropriate<br>
+                        • <strong>Axes swapped:</strong> Check X vs Y variable placement
+                    </div>
+                    
+                    <h5>🔍 Diagnostic Questions:</h5>
+                    <p>• Does the data range make sense?<br>
+                    • Are units correct and consistent?<br>
+                    • Did you select the right columns?<br>
+                    • Is the chart type appropriate for your data?<br>
+                    • Are there outliers skewing the display?</p>
+                    
+                    <p>When in doubt, start over with a simple chart and build up complexity!</p>
+                `
+            },
+            'understand graph': {
+                title: "How to Read and Interpret Your Own Graphs",
+                content: `
+                    <h5>👁️ Seeing What Your Data Is Telling You</h5>
+                    <p>Sometimes we create graphs but struggle to interpret them. Here's a systematic approach:</p>
+                    
+                    <div class="example-box">
+                        <strong>Step-by-Step Interpretation:</strong><br>
+                        1. <strong>Describe what you see:</strong> Overall pattern, direction, spread<br>
+                        2. <strong>Identify key features:</strong> Peaks, valleys, outliers, trends<br>
+                        3. <strong>Quantify relationships:</strong> Slope, correlation, differences<br>
+                        4. <strong>Consider context:</strong> What could cause these patterns?<br>
+                        5. <strong>Draw conclusions:</strong> What does this mean for your research?
+                    </div>
+                    
+                    <h5>🎯 Key Questions to Ask:</h5>
+                    <p>• What story does this graph tell?<br>
+                    • What surprised you about the results?<br>
+                    • How strong is the relationship?<br>
+                    • What factors might explain the pattern?</p>
+                `
+            },
+            'effective visualization': {
+                title: "Making Your Visualizations Actually Effective",
+                content: `
+                    <h5>💡 Beyond Just Creating Charts</h5>
+                    <p>Effective visualization communicates insights clearly and persuasively:</p>
+                    
+                    <div class="example-box">
+                        <strong>Effectiveness Criteria:</strong><br>
+                        • <strong>Clear message:</strong> Viewer understands main point immediately<br>
+                        • <strong>Accurate representation:</strong> Visual matches the data<br>
+                        • <strong>Appropriate complexity:</strong> Not too simple or overwhelming<br>
+                        • <strong>Context provided:</strong> Viewer has enough information to interpret
+                    </div>
+                    
+                    <h5>🎯 Test Your Effectiveness:</h5>
+                    <p>• Show your graph to someone else - what do they see?<br>
+                    • Can they identify the main message in 5 seconds?<br>
+                    • Do they ask clarifying questions?<br>
+                    • Would the graph work without your explanation?</p>
+                    
+                    <p>The best visualizations tell their story without needing narration!</p>
+                `
+            },
+
+            // Default response for unmatched questions
             'default': {
                 title: "Data Visualization Help - Ask Me Anything!",
                 content: `
@@ -1351,6 +2294,56 @@ Examples:
             if ((q.includes('bar') && q.includes('histogram')) || q.includes('bar vs histogram')) return 'bar vs histogram';
             if (q.includes('pie chart') || q.includes('when pie')) return 'pie chart';
             if (q.includes('box plot') && (q.includes('when') || q.includes('use'))) return 'box plot use';
+            if (q.includes('histogram') && (q.includes('when') || q.includes('use'))) return 'histogram use';
+            if (q.includes('line graph') || q.includes('line chart')) return 'line graph';
+            if ((q.includes('column') && q.includes('bar')) || q.includes('vertical vs horizontal')) return 'column vs bar';
+            if (q.includes('3d') || q.includes('three dimensional')) return '3d charts';
+            if (q.includes('chart selection') || q.includes('decision tree')) return 'chart selection';
+            
+            // Correlation & Relationships
+            if (q.includes('correlation coefficient') || (q.includes('correlation') && q.includes('r'))) return 'correlation coefficient';
+            if (q.includes('r squared') || q.includes('r²') || q.includes('r-squared')) return 'r squared';
+            if ((q.includes('r vs') && q.includes('r²')) || q.includes('difference between r')) return 'r vs r squared';
+            if (q.includes('correlation strength') || q.includes('strong correlation')) return 'correlation strength';
+            if (q.includes('negative correlation') || q.includes('negative r')) return 'negative correlation';
+            if (q.includes('correlation excel') || q.includes('calculate correlation')) return 'correlation excel';
+            if (q.includes('correlation causation') || q.includes('correlation imply causation')) return 'correlation causation';
+            if (q.includes('meaningful correlation') || q.includes('significant correlation')) return 'strong correlation';
+            
+            // Excel Technical Help
+            if (q.includes('trendline') || q.includes('trend line')) return 'add trendline';
+            if (q.includes('format') && q.includes('ax')) return 'format axes';
+            if (q.includes('gridlines') || q.includes('grid lines')) return 'remove gridlines';
+            if (q.includes('color') && q.includes('chart')) return 'chart colors';
+            if (q.includes('error bar')) return 'error bars';
+            if (q.includes('scatter plot') && q.includes('excel')) return 'scatter plot excel';
+            if (q.includes('axis label') || q.includes('label ax')) return 'axis labels';
+            if (q.includes('resize') || q.includes('size chart')) return 'resize chart';
+            
+            // Data Interpretation
+            if (q.includes('interpret scatter') || q.includes('read scatter')) return 'interpret scatter';
+            if (q.includes('outlier')) return 'outliers';
+            if (q.includes('read box plot') || q.includes('interpret box')) return 'read box plot';
+            if (q.includes('skew') || q.includes('skewed')) return 'skewed data';
+            if (q.includes('trend') || q.includes('pattern')) return 'identify trends';
+            if (q.includes('normal distribution') || q.includes('bell curve')) return 'normal distribution';
+            
+            // Formatting & Best Practices
+            if (q.includes('academic') || q.includes('professional graph')) return 'good academic graph';
+            if (q.includes('title') || q.includes('caption')) return 'chart title';
+            if (q.includes('professional color') || q.includes('color choice')) return 'professional colors';
+            if (q.includes('axis') && q.includes('zero')) return 'axis zero';
+            if (q.includes('professional chart') || q.includes('checklist')) return 'professional chart';
+            
+            // Common Student Struggles
+            if (q.includes('data looks wrong') || q.includes('graph looks weird')) return 'data looks wrong';
+            if (q.includes('understand') && q.includes('graph')) return 'understand graph';
+            if (q.includes('effective') && q.includes('visual')) return 'effective visualization';
+            
+            // Specific simple matches
+            if (q.includes('correlation') || q.includes(' r ') || q.includes('coefficient')) return 'correlation coefficient';
+            if (q.includes('scatter')) return 'scatter plot excel';
+            if (q.includes('box')) return 'box plot use';
             
             return 'default';
         }
@@ -1369,6 +2362,7 @@ Examples:
         function goHome() {
             document.getElementById('worksheetPage').style.display = 'none';
             document.getElementById('quizPage').style.display = 'none';
+            document.getElementById('drLevinHelpPage').style.display = 'none';
             document.getElementById('chatbotPage').style.display = 'none';
             document.getElementById('welcomePage').style.display = 'block';
             
@@ -1382,6 +2376,11 @@ Examples:
             // Reset chatbot form
             document.getElementById('chatQuestion').value = '';
             document.getElementById('chatResponse').classList.remove('show');
+        }
+        
+        function showDrLevinHelp() {
+            document.getElementById('welcomePage').style.display = 'none';
+            document.getElementById('drLevinHelpPage').style.display = 'block';
         }
         
         function showChatbot() {
@@ -1475,8 +2474,8 @@ Examples:
             }
             
             if (code === 'GGR2_PRAC3') {
-                // Use the GitHub raw URL for direct download
-                const fileUrl = 'https://github.com/JonathanGGR2/GGR2_STATS1/raw/main/Prac_workalong.xlsx';
+                // Use the GitHub Pages URL
+                const fileUrl = 'https://jonathanggr2.github.io/GGR2_STATS1/Prac_workalong.xlsx';
                 
                 // Create a download link
                 const link = document.createElement('a');
@@ -1491,35 +2490,6 @@ Examples:
                 document.getElementById('worksheetCode').value = '';
             } else {
                 showMessage('worksheetMessage', '❌ Invalid code. Please use "GGR2_PRAC3" as provided in class.', 'error');
-            }
-        }
-        
-        // Exercise download function
-        function downloadExercise() {
-            const code = document.getElementById('exerciseCode').value.trim().toUpperCase();
-            
-            if (!code) {
-                showMessage('exerciseMessage', 'Please enter a worksheet code.', 'error');
-                return;
-            }
-            
-            if (code === 'PRAC3_DOWNLOAD') {
-                // Use the GitHub raw URL for direct download
-                const fileUrl = 'https://github.com/JonathanGGR2/GGR2_STATS1/raw/main/Prac%203%20-%20student%20exercise.pdf';
-                
-                // Create a download link
-                const link = document.createElement('a');
-                link.href = fileUrl;
-                link.target = '_blank'; // Opens in new tab if direct download fails
-                link.setAttribute('download', 'Prac_3_student_exercise.pdf');
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                
-                showMessage('exerciseMessage', '✅ Downloaded: Prac 3 - Student Exercise.pdf', 'success');
-                document.getElementById('exerciseCode').value = '';
-            } else {
-                showMessage('exerciseMessage', '❌ Invalid code. Please use "PRAC3_DOWNLOAD" as provided in class.', 'error');
             }
         }
         
@@ -1552,9 +2522,72 @@ Examples:
             }, 1000);
         }
         
+        // Enhanced Dr. Levin interaction
+        function askDrLevin() {
+            const question = document.getElementById('struggle').value.trim();
+            
+            if (!question) {
+                alert('Please enter a question for Dr. Levin!');
+                return;
+            }
+            
+            const responseDiv = document.getElementById('drLevinResponse');
+            responseDiv.classList.add('show');
+            responseDiv.innerHTML = `
+                <div class="typing-indicator">
+                    <div class="ai-avatar-small">👨‍🏫</div>
+                    <span>Dr. Levin is analyzing your question</span>
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            `;
+            
+            setTimeout(() => {
+                const responseKey = findBestResponse(question);
+                const response = drLevinResponses[responseKey];
+                
+                responseDiv.innerHTML = `
+                    <div class="response-header">
+                        <div class="ai-avatar-small">👨‍🏫</div>
+                        <strong>Dr. Levin responds:</strong>
+                    </div>
+                    <div class="response-content">
+                        <h4>${response.title}</h4>
+                        ${response.content}
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="ai-btn secondary" onclick="askFollowUp()">💭 Ask Another Question</button>
+                        <button class="ai-btn" onclick="proceedToCheatSheet()">✅ Get My Cheat Sheet</button>
+                    </div>
+                `;
+            }, 2500);
+        }
+        
+        function askFollowUp() {
+            document.getElementById('struggle').value = '';
+            document.getElementById('drLevinResponse').classList.remove('show');
+        }
+        
+        function proceedToCheatSheet() {
+            document.getElementById('cheatsheetSection').classList.add('show');
+        }
+        
         // Cheat sheet download
         function downloadCheatSheet() {
-            alert('🎉 Cheat sheet download would start here! In the real environment, this downloads the PDF file.');
+            // Use the GitHub Pages URL
+            const fileUrl = 'https://jonathanggr2.github.io/GGR2_STATS1/Prac3Cheat_Sheet.pdf';
+            
+            // Create a download link
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.target = '_blank'; // Opens in new tab if direct download fails
+            link.setAttribute('download', 'Statistical_Visualization_CheatSheet.pdf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
         
         // Helper functions
