@@ -853,28 +853,33 @@
         }
         
         // Worksheet download function
-        function downloadWorksheet() {
-            const code = document.getElementById('worksheetCode').value.trim().toUpperCase();
-            const messageDiv = document.getElementById('worksheetMessage');
-            
-            if (!code) {
-                showMessage('worksheetMessage', 'Please enter a worksheet code.', 'error');
-                return;
-            }
-            
-            if (code === 'GGR2_PRAC3') {
-                // Trigger download for the Excel file
-                const link = document.createElement('a');
-                link.href = 'Prac_workalong.xlsx'; // This should be the actual path to your file
-                link.download = 'Prac_workalong.xlsx';
-                link.click();
-                
-                showMessage('worksheetMessage', '✅ Downloaded: Prac_workalong.xlsx', 'success');
-                document.getElementById('worksheetCode').value = '';
-            } else {
-                showMessage('worksheetMessage', '❌ Invalid code. Please use "GGR2_PRAC3" as provided in class.', 'error');
-            }
-        }
+    function downloadWorksheet() {
+    const code = document.getElementById('worksheetCode').value.trim().toUpperCase();
+    
+    if (!code) {
+        showMessage('worksheetMessage', 'Please enter a worksheet code.', 'error');
+        return;
+    }
+    
+    if (code === 'GGR2_PRAC3') {
+        // Use the GitHub Pages URL
+        const fileUrl = 'https://jonathanggr2.github.io/GGR2_STATS1/Prac_workalong.xlsx';
+        
+        // Create a download link
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.target = '_blank'; // Opens in new tab if direct download fails
+        link.setAttribute('download', 'Prac_workalong.xlsx');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        showMessage('worksheetMessage', '✅ Downloaded: Prac_workalong.xlsx', 'success');
+        document.getElementById('worksheetCode').value = '';
+    } else {
+        showMessage('worksheetMessage', '❌ Invalid code. Please use "GGR2_PRAC3" as provided in class.', 'error');
+    }
+}
         
         // Quiz submission
         function submitQuiz() {
@@ -968,13 +973,19 @@
         }
         
         // Cheat sheet download
-        function downloadCheatSheet() {
-            // Link to download the visualization cheat sheet PDF
-            const link = document.createElement('a');
-            link.href = 'StatisticalVisualizationCheatSheet.pdf'; // Replace with actual path
-            link.download = 'Statistical_Visualization_CheatSheet.pdf';
-            link.click();
-        }
+   function downloadCheatSheet() {
+    // Use the GitHub Pages URL
+    const fileUrl = 'https://jonathanggr2.github.io/GGR2_STATS1/Prac3Cheat_Sheet.pdf';
+    
+    // Create a download link
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.target = '_blank'; // Opens in new tab if direct download fails
+    link.setAttribute('download', 'Statistical_Visualization_CheatSheet.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
         
         // Helper functions
         function showMessage(elementId, text, type) {
