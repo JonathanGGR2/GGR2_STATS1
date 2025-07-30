@@ -522,6 +522,182 @@
             border: 1px solid rgba(239, 68, 68, 0.2);
         }
         
+        /* Chatbot Page Styles */
+        .chatbot-section {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .chatbot-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 15px;
+        }
+        
+        .chatbot-info {
+            text-align: center;
+        }
+        
+        .chatbot-info h2 {
+            color: #059669;
+            margin: 0 0 5px 0;
+            font-size: 2em;
+        }
+        
+        .chatbot-info p {
+            color: #6b7280;
+            margin: 0;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        .sample-questions-section {
+            background: rgba(249, 250, 251, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+        
+        .sample-questions-section h3 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.3em;
+        }
+        
+        .questions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .questions-column {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .questions-column h4 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.1em;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+        }
+        
+        .questions-column .sample-q-btn {
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.4;
+            border-radius: 8px;
+            background: rgba(249, 250, 251, 0.8);
+            border: 1px solid rgba(102, 126, 234, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .questions-column .sample-q-btn:hover {
+            background: rgba(102, 126, 234, 0.08);
+            border-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+        }
+        
+        .sample-questions-container {
+            margin-bottom: 20px;
+        }
+        
+        .sample-questions-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .sample-q-btn {
+            background: white;
+            border: 2px solid rgba(102, 126, 234, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            color: #374151;
+            font-style: italic;
+            text-align: left;
+        }
+        
+        .sample-q-btn:hover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .show-more-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .show-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .chat-interface {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        
+        .chat-input-section h3 {
+            color: #059669;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .chat-input-section textarea {
+            width: 100%;
+            padding: 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 120px;
+            transition: border-color 0.3s ease;
+            line-height: 1.5;
+        }
+        
+        .chat-input-section textarea:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+        
         /* Help Section Styles */
         .help-section {
             padding: 0 20px;
@@ -633,6 +809,26 @@
             .sample-question {
                 font-size: 0.9em;
             }
+            
+            .questions-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .questions-column .sample-q-btn:hover {
+                transform: translateY(-2px);
+                transform: translateX(0);
+            }
+            
+            .chatbot-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .chatbot-header .ai-avatar {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -652,7 +848,7 @@
                 <div class="welcome-message">
                     <p>Today we'll be exploring different types of data visualization techniques and how to select the right graph type for your data. Learn how to create effective scatter plots, line graphs, box plots, and more!</p>
                     <br>
-                    <p><strong>Work with me in class</strong> using our interactive worksheet, and <strong>test your knowledge</strong> with our quiz to get personalized help from Dr. Levin, your personal stats chatbot.</p>
+                    <p><strong>Choose your learning path below:</strong> work with me in class, test your knowledge, or get instant help from Dr. Levin!</p>
                 </div>
                 
                 <!-- Option 1: In-Class Worksheet -->
@@ -661,16 +857,206 @@
                     <p>Download the worksheet file using your unique code. We'll work through the problems together during class time, exploring statistical functions and data analysis techniques step by step.</p>
                 </div>
                 
-                <!-- Option 2: Quiz & AI Assistant -->
+                <!-- Option 2: Quiz & Cheat Sheet -->
                 <div class="prac-card" onclick="showQuiz()">
-                    <h3>🧠 Option 2: Quiz & Stats Chatbot</h3>
-                    <p>Test your knowledge with our interactive quiz, then get personalized explanations from Dr. Levin for any concepts you're struggling with. Complete the experience by downloading your cheat sheet!</p>
+                    <h3>🧠 Option 2: Quiz & Cheat Sheet</h3>
+                    <p>Test your knowledge with our interactive quiz about data visualization and statistical graphs. Successfully complete the quiz to unlock and download your personalized cheat sheet!</p>
                 </div>
                 
-                <!-- Option 3: Dr. Levin Help -->
-                <div class="prac-card" onclick="showDrLevinHelp()">
-                    <h3>💬 What Can You Ask Dr. Levin?</h3>
-                    <p>See examples of questions you can ask Dr. Levin, your personal statistics chatbot. From graph selection to Excel help, discover how to get the most out of your AI tutor!</p>
+                <!-- Option 3: Dr. Levin Chatbot -->
+                <div class="prac-card" onclick="showChatbot()">
+                    <h3>💬 Option 3: Dr. Levin Chatbot</h3>
+                    <p>Get instant help from Dr. Levin, your personal statistics chatbot technical tutor. Ask questions about graphs, Excel, correlation, or any data visualization topic - no quiz required!</p>
+                </div>
+            </div>
+            
+            <!-- Dr. Levin Chatbot Page -->
+            <div id="chatbotPage" class="page-content">
+                <button class="back-btn" onclick="goHome()">
+                    ← Back to Options
+                </button>
+                
+                <div class="chatbot-section">
+                    <div class="chatbot-header">
+                        <div class="ai-avatar">👨‍🏫</div>
+                        <div class="chatbot-info">
+                            <h2>Dr. Levin - Statistics Chatbot</h2>
+                            <p>Your Personal Technical Tutor for Data Visualization</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Sample Questions Section -->
+                    <div class="sample-questions-section">
+                        <h3>💡 Click any question below to see Dr. Levin's response:</h3>
+                        
+                        <!-- First 20 Questions (Always Visible) -->
+                        <div class="questions-grid" id="mainQuestions">
+                            <div class="questions-column">
+                                <h4>📊 Graph Types & Excel Help</h4>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('Which graph should I use for my data?')">
+                                    Which graph should I use for my data?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('When do I use a scatter plot vs line graph?')">
+                                    When do I use a scatter plot vs line graph?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What is the difference between bar charts and histograms?')">
+                                    What's the difference between bar charts and histograms?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('When should I use a pie chart?')">
+                                    When should I use a pie chart?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What are box plots used for?')">
+                                    What are box plots used for?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('When should I use a histogram?')">
+                                    When should I use a histogram?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('When do I use a line graph?')">
+                                    When do I use a line graph?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What is the difference between column and bar charts?')">
+                                    What's the difference between column and bar charts?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('Should I use 3D charts in Excel?')">
+                                    Should I use 3D charts in Excel?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I choose between different chart types?')">
+                                    How do I choose between different chart types?
+                                </button>
+                            </div>
+                            
+                            <div class="questions-column">
+                                <h4>📈 Correlation & Data Analysis</h4>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What does correlation coefficient r mean?')">
+                                    What does correlation coefficient r mean?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I interpret R-squared values?')">
+                                    How do I interpret R-squared values?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What is the difference between r and R squared?')">
+                                    What's the difference between r and R²?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What does a correlation of 0.7 mean?')">
+                                    What does a correlation of 0.7 mean?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('Can correlation be negative?')">
+                                    Can correlation be negative?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I calculate correlation in Excel?')">
+                                    How do I calculate correlation in Excel?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What does correlation does not imply causation mean?')">
+                                    What does "correlation ≠ causation" mean?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What makes a correlation meaningful?')">
+                                    What makes a correlation meaningful?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I interpret a scatter plot?')">
+                                    How do I interpret a scatter plot?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What do outliers mean in my data?')">
+                                    What do outliers mean in my data?
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Additional 20 Questions (Show More) -->
+                        <div class="questions-grid" id="additionalQuestions" style="display: none;">
+                            <div class="questions-column">
+                                <h4>🔧 Excel Technical Support</h4>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I add a trendline in Excel?')">
+                                    How do I add a trendline in Excel?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I format my chart axes?')">
+                                    How do I format my chart axes?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I remove gridlines from my chart?')">
+                                    How do I remove gridlines from my chart?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I change colors in my Excel chart?')">
+                                    How do I change colors in my Excel chart?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I add error bars to my chart?')">
+                                    How do I add error bars to my chart?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I create a scatter plot in Excel?')">
+                                    How do I create a scatter plot in Excel?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I add axis labels in Excel?')">
+                                    How do I add axis labels in Excel?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I resize my chart in Excel?')">
+                                    How do I resize my chart in Excel?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I read a box plot?')">
+                                    How do I read a box plot?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What does skewed data look like?')">
+                                    What does skewed data look like?
+                                </button>
+                            </div>
+                            
+                            <div class="questions-column">
+                                <h4>🎨 Professional Chart Design</h4>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I identify trends in my data?')">
+                                    How do I identify trends in my data?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What is normal distribution in graphs?')">
+                                    What's normal distribution in graphs?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What makes a good academic graph?')">
+                                    What makes a good academic graph?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('Should I include a title on my chart?')">
+                                    Should I include a title on my chart?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('What colors should I use in academic charts?')">
+                                    What colors should I use in academic charts?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I make my chart look professional?')">
+                                    How do I make my chart look professional?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('Should I start my axis at zero?')">
+                                    Should I start my axis at zero?
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('My data does not look right in the graph')">
+                                    My data doesn't look right in the graph
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('I do not understand what my graph is telling me')">
+                                    I don't understand what my graph is telling me
+                                </button>
+                                <button class="sample-q-btn" onclick="askSampleQuestion('How do I know if my visualization is effective?')">
+                                    How do I know if my visualization is effective?
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <button class="show-more-btn" onclick="toggleAllQuestions()" id="showAllBtn">
+                            Show All 40 Questions (20 More) ↓
+                        </button>
+                    </div>
+                    
+                    <!-- Chat Interface -->
+                    <div class="chat-interface">
+                        <div class="chat-input-section">
+                            <h3>💬 Ask Dr. Levin Anything About Statistics & Data Visualization</h3>
+                            <div class="form-group">
+                                <textarea id="chatQuestion" placeholder="Type your question here... 
+
+Examples:
+• How do I know which graph type to use?
+• What does my correlation coefficient mean?
+• How do I make my chart look professional?
+• How do I create a scatter plot in Excel?" rows="4"></textarea>
+                            </div>
+                            
+                            <button class="ai-btn" onclick="askDrLevinDirect()">🤖 Ask Dr. Levin</button>
+                        </div>
+                        
+                        <div id="chatResponse" class="ai-response">
+                            <!-- AI response will be populated here -->
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -831,44 +1217,20 @@
                             <input type="text" id="q3" placeholder="Enter graph type">
                         </div>
                         
-                        <button class="quiz-btn" onclick="submitQuiz()">Submit Quiz & Continue</button>
+                        <button class="quiz-btn" onclick="submitQuiz()">Submit Quiz & Get Cheat Sheet</button>
                         
                         <div id="quizMessage" class="message"></div>
-                    </div>
-                </div>
-                
-                <!-- Dr. Levin AI Section -->
-                <div id="drLevinSection" class="dr-levin-section">
-                    <div class="ai-header">
-                        <div class="ai-avatar">👨‍🏫</div>
-                        <div class="ai-info">
-                            <h3>Ask Dr. Levin</h3>
-                            <p>Your Personal Statistics Chatbot</p>
-                        </div>
-                    </div>
-                    
-                    <div class="struggle-form">
-                        <h4>🤔 What visualization concept are you struggling with?</h4>
-                        <p style="color: #666; margin-bottom: 20px;">Type your question and Dr. Levin will create a personalized explanation just for you!</p>
-                        
-                        <div class="form-group">
-                            <textarea id="struggle" placeholder="Example: 'How do I know which graph type to use?' or 'What does R² tell me about my data?'" rows="3"></textarea>
-                        </div>
-                        
-                        <button class="ai-btn" onclick="askDrLevin()">🤖 Ask Dr. Levin</button>
-                    </div>
-                    
-                    <div id="drLevinResponse" class="ai-response">
-                        <!-- AI response will be populated here -->
                     </div>
                 </div>
                 
                 <!-- Cheat Sheet Download Section -->
                 <div id="cheatsheetSection" class="cheatsheet-section">
                     <h3>🎉 Congratulations! Quiz Complete</h3>
-                    <p>You've successfully completed the quiz and worked with Dr. Levin. Download your personalized visualization cheat sheet below:</p>
+                    <p>You've successfully completed the quiz! Download your personalized visualization cheat sheet below:</p>
                     <br>
                     <button class="download-btn" onclick="downloadCheatSheet()">📄 Download Your Cheat Sheet</button>
+                    <br><br>
+                    <p style="color: #666; font-size: 0.9em;">Need help with statistics concepts? Check out <strong>Option 3: Dr. Levin Chatbot</strong> from the main menu!</p>
                 </div>
             </div>
         </div>
@@ -2000,6 +2362,7 @@
             document.getElementById('worksheetPage').style.display = 'none';
             document.getElementById('quizPage').style.display = 'none';
             document.getElementById('drLevinHelpPage').style.display = 'none';
+            document.getElementById('chatbotPage').style.display = 'none';
             document.getElementById('welcomePage').style.display = 'block';
             
             // Reset quiz form
@@ -2007,13 +2370,97 @@
             document.getElementById('q1').value = '';
             document.getElementById('q2').value = '';
             document.getElementById('q3').value = '';
-            document.getElementById('drLevinSection').classList.remove('show');
             document.getElementById('cheatsheetSection').classList.remove('show');
+            
+            // Reset chatbot form
+            document.getElementById('chatQuestion').value = '';
+            document.getElementById('chatResponse').classList.remove('show');
         }
         
         function showDrLevinHelp() {
             document.getElementById('welcomePage').style.display = 'none';
             document.getElementById('drLevinHelpPage').style.display = 'block';
+        }
+        
+        function showChatbot() {
+            document.getElementById('welcomePage').style.display = 'none';
+            document.getElementById('chatbotPage').style.display = 'block';
+        }
+        
+        // Sample question functionality
+        function askSampleQuestion(question) {
+            document.getElementById('chatQuestion').value = question;
+            askDrLevinDirect();
+        }
+        
+        function toggleAllQuestions() {
+            const additionalQuestions = document.getElementById('additionalQuestions');
+            const btn = document.getElementById('showAllBtn');
+            
+            if (additionalQuestions.style.display === 'none') {
+                additionalQuestions.style.display = 'block';
+                btn.textContent = 'Show Less Questions ↑';
+            } else {
+                additionalQuestions.style.display = 'none';
+                btn.textContent = 'Show All 40 Questions (20 More) ↓';
+            }
+        }
+        
+        // Direct chatbot interaction (no quiz required)
+        function askDrLevinDirect() {
+            const question = document.getElementById('chatQuestion').value.trim();
+            
+            if (!question) {
+                alert('Please enter a question for Dr. Levin!');
+                return;
+            }
+            
+            const responseDiv = document.getElementById('chatResponse');
+            responseDiv.classList.add('show');
+            responseDiv.innerHTML = `
+                <div class="typing-indicator">
+                    <div class="ai-avatar-small">👨‍🏫</div>
+                    <span>Dr. Levin is analyzing your question</span>
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            `;
+            
+            setTimeout(() => {
+                const responseKey = findBestResponse(question);
+                const response = drLevinResponses[responseKey];
+                
+                responseDiv.innerHTML = `
+                    <div class="response-header">
+                        <div class="ai-avatar-small">👨‍🏫</div>
+                        <strong>Dr. Levin responds:</strong>
+                    </div>
+                    <div class="response-content">
+                        <h4>${response.title}</h4>
+                        ${response.content}
+                    </div>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="ai-btn secondary" onclick="askAnotherQuestion()">💭 Ask Another Question</button>
+                        <button class="ai-btn" onclick="goToQuiz()">📝 Take Quiz for Cheat Sheet</button>
+                    </div>
+                `;
+                
+                // Scroll to response
+                responseDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 2500);
+        }
+        
+        function askAnotherQuestion() {
+            document.getElementById('chatQuestion').value = '';
+            document.getElementById('chatResponse').classList.remove('show');
+            document.getElementById('chatQuestion').focus();
+        }
+        
+        function goToQuiz() {
+            showQuiz();
         }
         
         // Worksheet download function
@@ -2068,9 +2515,9 @@
             
             showMessage('quizMessage', `✅ Quiz submitted! Score: ${score}/3 (${Math.round(score/3*100)}%)`, 'success');
             
-            // Show Dr. Levin section
+            // Show cheat sheet section immediately
             setTimeout(() => {
-                document.getElementById('drLevinSection').classList.add('show');
+                document.getElementById('cheatsheetSection').classList.add('show');
             }, 1000);
         }
         
