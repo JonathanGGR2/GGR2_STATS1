@@ -522,6 +522,86 @@
             border: 1px solid rgba(239, 68, 68, 0.2);
         }
         
+        /* Help Section Styles */
+        .help-section {
+            padding: 0 20px;
+        }
+        
+        .help-section h2 {
+            color: #333;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .help-categories {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .help-category {
+            background: rgba(249, 250, 251, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+        
+        .help-category h3 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .sample-question {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            font-style: italic;
+            color: #374151;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .sample-question:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .sample-question:before {
+            content: "💬";
+            margin-right: 8px;
+        }
+        
+        .try-dr-levin {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .try-dr-levin h3 {
+            color: #059669;
+            margin-bottom: 15px;
+        }
+        
+        .try-dr-levin p {
+            color: #374151;
+            margin-bottom: 20px;
+        }
+        
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .container {
@@ -545,6 +625,14 @@
                 margin-right: 0;
                 margin-bottom: 15px;
             }
+            
+            .question-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sample-question {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -564,7 +652,7 @@
                 <div class="welcome-message">
                     <p>Today we'll be exploring different types of data visualization techniques and how to select the right graph type for your data. Learn how to create effective scatter plots, line graphs, box plots, and more!</p>
                     <br>
-                    <p><strong>Work with me in class</strong> using our interactive worksheet, and <strong>test your knowledge</strong> with our quiz to get personalized help from Dr. Levin, your AI teaching assistant.</p>
+                    <p><strong>Work with me in class</strong> using our interactive worksheet, and <strong>test your knowledge</strong> with our quiz to get personalized help from Dr. Levin, your personal stats chatbot.</p>
                 </div>
                 
                 <!-- Option 1: In-Class Worksheet -->
@@ -575,8 +663,101 @@
                 
                 <!-- Option 2: Quiz & AI Assistant -->
                 <div class="prac-card" onclick="showQuiz()">
-                    <h3>🧠 Option 2: Quiz & AI Assistant</h3>
+                    <h3>🧠 Option 2: Quiz & Stats Chatbot</h3>
                     <p>Test your knowledge with our interactive quiz, then get personalized explanations from Dr. Levin for any concepts you're struggling with. Complete the experience by downloading your cheat sheet!</p>
+                </div>
+                
+                <!-- Option 3: Dr. Levin Help -->
+                <div class="prac-card" onclick="showDrLevinHelp()">
+                    <h3>💬 What Can You Ask Dr. Levin?</h3>
+                    <p>See examples of questions you can ask Dr. Levin, your personal statistics chatbot. From graph selection to Excel help, discover how to get the most out of your AI tutor!</p>
+                </div>
+            </div>
+            
+            <!-- Dr. Levin Help Page -->
+            <div id="drLevinHelpPage" class="page-content">
+                <button class="back-btn" onclick="goHome()">
+                    ← Back to Options
+                </button>
+                
+                <div class="help-section">
+                    <h2>💬 What Can You Ask Dr. Levin?</h2>
+                    <p style="text-align: center; color: #666; margin-bottom: 30px;">Dr. Levin is your personal statistics chatbot, ready to help with data visualization questions!</p>
+                    
+                    <div class="help-categories">
+                        <!-- Graph Selection Questions -->
+                        <div class="help-category">
+                            <h3>📊 Choosing the Right Graph</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"Which graph should I use for my data?"</div>
+                                <div class="sample-question">"When do I use a scatter plot vs line graph?"</div>
+                                <div class="sample-question">"What's the difference between bar charts and histograms?"</div>
+                                <div class="sample-question">"When should I use a pie chart?"</div>
+                                <div class="sample-question">"What are box plots used for?"</div>
+                                <div class="sample-question">"Should I use 3D charts in Excel?"</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Correlation Questions -->
+                        <div class="help-category">
+                            <h3>📈 Understanding Relationships</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"What does correlation coefficient r mean?"</div>
+                                <div class="sample-question">"How do I interpret R-squared values?"</div>
+                                <div class="sample-question">"What's the difference between r and R²?"</div>
+                                <div class="sample-question">"What does a correlation of 0.7 mean?"</div>
+                                <div class="sample-question">"Can correlation be negative?"</div>
+                                <div class="sample-question">"What's correlation vs causation?"</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Excel Help Questions -->
+                        <div class="help-category">
+                            <h3>🔧 Excel Technical Help</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"How do I add a trendline in Excel?"</div>
+                                <div class="sample-question">"How do I format my chart axes?"</div>
+                                <div class="sample-question">"How do I remove gridlines from my chart?"</div>
+                                <div class="sample-question">"How do I create a scatter plot in Excel?"</div>
+                                <div class="sample-question">"How do I add axis labels in Excel?"</div>
+                                <div class="sample-question">"How do I calculate correlation in Excel?"</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Data Interpretation Questions -->
+                        <div class="help-category">
+                            <h3>🔍 Understanding Your Data</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"How do I interpret a scatter plot?"</div>
+                                <div class="sample-question">"What do outliers mean in my data?"</div>
+                                <div class="sample-question">"How do I read a box plot?"</div>
+                                <div class="sample-question">"What does skewed data look like?"</div>
+                                <div class="sample-question">"How do I identify trends in my data?"</div>
+                                <div class="sample-question">"What's normal distribution?"</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Professional Tips -->
+                        <div class="help-category">
+                            <h3>🎨 Making Professional Charts</h3>
+                            <div class="question-grid">
+                                <div class="sample-question">"What makes a good academic graph?"</div>
+                                <div class="sample-question">"What colors should I use in charts?"</div>
+                                <div class="sample-question">"Should I start my axis at zero?"</div>
+                                <div class="sample-question">"How do I make my chart look professional?"</div>
+                                <div class="sample-question">"Should I include a title on my chart?"</div>
+                                <div class="sample-question">"My data doesn't look right in the graph"</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="try-dr-levin">
+                        <h3>🚀 Ready to Chat with Dr. Levin?</h3>
+                        <p>Take the quiz first, then ask Dr. Levin any of these questions - or your own!</p>
+                        <button class="quiz-btn" onclick="showQuiz()" style="width: auto; padding: 15px 30px; margin: 20px auto; display: block;">
+                            Start Quiz & Meet Dr. Levin →
+                        </button>
+                    </div>
                 </div>
             </div>
             
@@ -662,7 +843,7 @@
                         <div class="ai-avatar">👨‍🏫</div>
                         <div class="ai-info">
                             <h3>Ask Dr. Levin</h3>
-                            <p>Your Personal AI Teaching Assistant</p>
+                            <p>Your Personal Statistics Chatbot</p>
                         </div>
                     </div>
                     
@@ -1818,6 +1999,7 @@
         function goHome() {
             document.getElementById('worksheetPage').style.display = 'none';
             document.getElementById('quizPage').style.display = 'none';
+            document.getElementById('drLevinHelpPage').style.display = 'none';
             document.getElementById('welcomePage').style.display = 'block';
             
             // Reset quiz form
@@ -1827,6 +2009,11 @@
             document.getElementById('q3').value = '';
             document.getElementById('drLevinSection').classList.remove('show');
             document.getElementById('cheatsheetSection').classList.remove('show');
+        }
+        
+        function showDrLevinHelp() {
+            document.getElementById('welcomePage').style.display = 'none';
+            document.getElementById('drLevinHelpPage').style.display = 'block';
         }
         
         // Worksheet download function
